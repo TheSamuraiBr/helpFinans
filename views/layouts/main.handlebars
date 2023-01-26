@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help Finanças</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script  src="/js/script.js" defer></script>
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  </head>
+<body>
+   <nav id="navbar"><!-- cabeçalho -->
+      <a href="/" id="logo">
+        <img src="/img/logo.png" alt="Help Finanças">
+      </a>
+      <ul>
+        <li><a href="/">Home</a></li>
+          <li><a href="/">Contato</a></li>
+          <li><a href="/auth/login">Login</a></li>
+      </ul>
+    </nav><!-- fim cabeçalho -->
+    <div id="container"> 
+      {{#if messages.message}}
+        <div class="message">
+          {{messages.message}}
+        </div>
+      {{/if}}
+    {{{body}}}
+     <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+      <div class="modal-header">
+        <h2 id="title_modal"></h2>
+        <button class="close-modal">Fechar</button>
+      </div>
+      <div class="modal-body">
+        <p id="message_modal">
+         
+        </p>
+        
+      </div>
+    </div>
+    </div>
+    <footer>
+        <p><span>Help Finanças</span> &copy: 2022</p>
+    </footer>
+</body>
+</html>
