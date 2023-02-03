@@ -5,6 +5,7 @@ const FileStore = require("session-file-store")(session);
 const flash = require("express-flash");
 require('dotenv').config();
 const port = process.env.PORT
+const secret = process.env.SECRET
 const app = express();
 const conn = require("./db/conn");
 const Entrada = require("./models/Entrada");
@@ -27,7 +28,7 @@ app.use(
   app.use(
     session({
       name: 'session',
-      secret: 'nosso_secret',
+      secret: secret,
       resave: false,
       saveUninitialized: false,
       store: new FileStore({
